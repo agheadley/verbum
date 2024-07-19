@@ -15,7 +15,7 @@
 </script>
 
 <div class="app">
-	<header>
+	<header  id="top">
 		<nav>
 			<a href='/' class={$page.url.pathname==='/' ? 'current' : ''}>Home</a>
 			<a href='/settings' class={$page.url.pathname==='/settings' ? 'current' : ''}><SettingsIcon size="16"/></a>
@@ -31,7 +31,7 @@
 	</main>
 
 	<footer>
-		<p>visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to learn SvelteKit</p>
+		<p>This is the footer! <a href='#top'>Top</a></p>
 	</footer>
 </div>
 
