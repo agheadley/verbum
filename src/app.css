@@ -81,13 +81,30 @@ a:hover {
   
 }
 
-article {
+article,fieldset,dialog {
     border:1px solid var(--text-light);
     border-radius: var(--border-radius);
     padding:0.5rem 1rem 0.5rem 1rem;
     margin:0.5rem 0 1rem 0;
 
 }
+
+.notice {
+    background: var(--accent-bg);
+    border: 2px solid var(--border);
+    border-radius: var(--border-radius);
+    padding:0.5rem 1rem 0.5rem 1rem;
+    margin:0.5rem 0 1rem 0;
+
+}
+
+fieldset>legend {
+    font-size:small;
+    padding:0 0.5rem 0 0.5rem;
+    text-transform: uppercase;
+}
+
+
 
 section {
     margin:0.5rem 0 1rem 0;
@@ -177,14 +194,15 @@ button.button.icon {
     border: 0px solid var(--preformatted);
     background-color: var(--bg);
     color: var(--accent);
-    padding: 0.4rem 0.8rem;
+    padding: 1rem 0.8rem;
     text-decoration: none;
     line-height: normal;
     border-radius: var(--border-radius);
 }
 
 button.button.icon:hover{
-    background-color: var(--disabled);
+    background-color: var(--bg);
+    color:var(--text);
     cursor: pointer;
 }
 
