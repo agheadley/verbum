@@ -13,54 +13,87 @@
     --preformatted: #444;
     --marked: #ffdd33;
     --disabled: #efefef;
+    --border-radius:0.3rem;
+}
+
+.app {
+    display: flex;
+    flex-direction: column;
+    color:var(--text);
+    background-color: var(--bg);
+
 }
 
 .app > header {
+    /*
     background:var(--accent-bg);
-    border-bottom:1px solid var(--accent);
+    border-bottom:1px solid var(--text-light);
+  
+    */
+     
     padding:1rem 1rem 2rem 1rem;
     text-align: center;
 }
 
 
 .app > footer {
-    border-top:1px solid var(--accent);
+    /*border-top:1px solid var(--text-light);*/
     padding:1rem 1rem 1rem 1rem;
-    text-align: center;
+    text-align: left;
 }
 
-header > nav > a,a:visited {
+header  .brand {
+    font-family:Garamond,Georgia, 'Times New Roman', Times, serif;
+  
+}
+
+nav>a,nav>a:visited {
     margin:0 0.5rem 0 0.5rem;
     letter-spacing: 0.1rem ;
-    color:var(--accent);
+    color:var(--text-light);
     text-decoration: none;
-    border-bottom:2px solid var(--accent-bg);
+    border-bottom:2px #ffffff00;
+    
 }
 
-header > .brand {
-    color:var(--accent);
-    font-size:1.6rem;
-    line-height:1.6rem;
-    font-weight:700;
+nav > a:hover {
+    border-bottom:2px solid var(--text-light);
 }
 
-header > nav > a:hover {
-    border-bottom:2px solid var(--border);
-}
-header > nav > a.current{
+nav > a.current {
+  
     border-bottom:2px solid var(--code);
 }
 
-
-
-main {
-    width:90%;
-    margin:auto;
-    max-width: 120rem;
+a,a:visited,a:active {
+    color:var(--accent);
 }
 
+a:hover {
+    text-decoration: none;
+}
 
-section>h4,article>h4 {
+.app > main {
+    width:90%;
+    max-width: 120rem;
+    margin:auto;
+   
+  
+}
+
+article {
+    border:1px solid var(--text-light);
+    border-radius: var(--border-radius);
+    padding:0.5rem 1rem 0.5rem 1rem;
+    margin:0.5rem 0 1rem 0;
+
+}
+
+section {
+    margin:0.5rem 0 1rem 0;
+}
+
+section>h2,article>h2 {
     font-family:Garamond,Georgia, 'Times New Roman', Times, serif;
     font-size:1.6rem;
 }
@@ -73,3 +106,100 @@ section>h4,article>h4 {
 .col {
     padding:0 0.5rem 0 0.5rem;
 }
+
+
+
+button.button,
+a.button,
+input[type="submit"],
+input[type="reset"],
+input[type="button"],
+label[type="button"] {
+    border: 1px solid var(--accent);
+    background-color: var(--accent);
+    color: var(--accent-text);
+    padding: 0.4rem 0.8rem;
+    text-decoration: none;
+    line-height: normal;
+    border-radius: var(--border-radius);
+}
+
+
+
+button.button:hover:enabled{
+    background-color: var(--accent-hover);
+    border-color: var(--accent-hover);
+    cursor: pointer;
+}
+
+.button:focus-visible,
+input:enabled:focus-visible:where(
+  [type="submit"],
+  [type="reset"],
+  [type="button"]
+) {
+  outline: 2px solid var(--accent);
+  outline-offset: 1px;
+}
+
+
+button.button[aria-disabled="true"], 
+button:disabled,
+input:disabled,
+textarea:disabled,
+select:disabled {
+  cursor: not-allowed;
+  background-color: var(--disabled);
+  border-color: var(--disabled);
+  color: var(--text-light);
+}
+
+
+button.button.outline
+{
+    border: 1px solid var(--preformatted);
+    background-color: var(--accent-text);
+    color: var(--preformatted);
+    padding: 0.4rem 0.8rem;
+    text-decoration: none;
+    line-height: normal;
+    border-radius: var(--border-radius);
+}
+
+button.button.outline:hover{
+    
+    background-color: var(--disabled);
+    border-color: var(--preformatted);
+    cursor: pointer;
+}
+
+button.button.icon {
+    border: 0px solid var(--preformatted);
+    background-color: var(--bg);
+    color: var(--accent);
+    padding: 0.4rem 0.8rem;
+    text-decoration: none;
+    line-height: normal;
+    border-radius: var(--border-radius);
+}
+
+button.button.icon:hover{
+    background-color: var(--disabled);
+    cursor: pointer;
+}
+
+blockquote {
+    margin-inline-start: 2rem;
+    margin-inline-end: 0;
+    margin-block: 2rem;
+    padding: 0.4rem 0.8rem;
+    border-inline-start: 0.35rem solid var(--accent);
+    color: var(--text-light);
+    font-style: italic;
+}
+
+.space-10 {
+    min-height:10rem;
+}
+
+

@@ -17,13 +17,14 @@
 
 <div class="app">
 	<header  id="top">
+		<h1><span class="brand">Verbum</span></h1>
 		<nav>
 			<a href='/' class={$page.url.pathname==='/' ? 'current' : ''}>Home</a>
 			<a href='/settings' class={$page.url.pathname==='/settings' ? 'current' : ''}><SettingsIcon size="16"/></a>
 				
 		</nav>
-		<p class="brand">Verbum</p>
-		<p>A svelte5 test app</p>
+		
+
 
 	</header>
 
@@ -32,7 +33,7 @@
 	</main>
 
 	<footer>
-		<p>This is the footer! <a href='#top'>Home</a></p>
+		<p>This is the footer! <a href='/#top'>Home</a></p>
 	</footer>
 </div>
 
