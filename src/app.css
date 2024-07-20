@@ -1,0 +1,75 @@
+
+:root {
+    /** https://simplecss.org/ */
+    --bg: #fff;
+    --accent-bg: #f5f7ff;
+    --text: #212121;
+    --text-light: #585858;
+    --border: #898EA4;
+    --accent: #0d47a1;
+    --accent-hover: #1266e2;
+    --accent-text: var(--bg);
+    --code: #d81b60;
+    --preformatted: #444;
+    --marked: #ffdd33;
+    --disabled: #efefef;
+}
+
+.app > header {
+    background:var(--accent-bg);
+    border-bottom:1px solid var(--accent);
+    padding:1rem 1rem 2rem 1rem;
+    text-align: center;
+}
+
+
+.app > footer {
+    border-top:1px solid var(--accent);
+    padding:1rem 1rem 1rem 1rem;
+    text-align: center;
+}
+
+header > nav > a,a:visited {
+    margin:0 0.5rem 0 0.5rem;
+    letter-spacing: 0.1rem ;
+    color:var(--accent);
+    text-decoration: none;
+    border-bottom:2px solid var(--accent-bg);
+}
+
+header > .brand {
+    color:var(--accent);
+    font-size:1.6rem;
+    line-height:1.6rem;
+    font-weight:700;
+}
+
+header > nav > a:hover {
+    border-bottom:2px solid var(--border);
+}
+header > nav > a.current{
+    border-bottom:2px solid var(--code);
+}
+
+
+
+main {
+    width:90%;
+    margin:auto;
+    max-width: 120rem;
+}
+
+
+section>h4,article>h4 {
+    font-family:Garamond,Georgia, 'Times New Roman', Times, serif;
+    font-size:1.6rem;
+}
+
+.row {
+    display:flex;
+    justify-content: space-between;
+}
+
+.col {
+    padding:0 0.5rem 0 0.5rem;
+}

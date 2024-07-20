@@ -1,5 +1,6 @@
 <script>
-	import '../simple.css';
+	import '../normalize.css';
+	import '../app.css';
 	import { page } from '$app/stores'; 
 	
 	import {UserIcon,SettingsIcon} from 'svelte-feather-icons';
@@ -21,17 +22,17 @@
 			<a href='/settings' class={$page.url.pathname==='/settings' ? 'current' : ''}><SettingsIcon size="16"/></a>
 				
 		</nav>
-		<h3>Verbum</h3>
+		<p class="brand">Verbum</p>
 		<p>A svelte5 test app</p>
-	
-		
+
 	</header>
+
 	<main>
 		<slot />
 	</main>
 
 	<footer>
-		<p>This is the footer! <a href='#top'>Top</a></p>
+		<p>This is the footer! <a href='#top'>Home</a></p>
 	</footer>
 </div>
 
